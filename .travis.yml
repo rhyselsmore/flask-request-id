@@ -1,0 +1,15 @@
+language: python
+python: "2.7"
+env:
+  - TOXENV=py27 REQUIREMENTS=lowest
+  - TOXENV=py27 REQUIREMENTS=release
+  - TOXENV=py27 REQUIREMENTS=latest
+  - TOXENV=py34 REQUIREMENTS=lowest
+  - TOXENV=py34 REQUIREMENTS=release
+  - TOXENV=py34 REQUIREMENTS=latest
+  - TOXENV=py33 REQUIREMENTS=lowest
+  - TOXENV=py33 REQUIREMENTS=release
+  - TOXENV=py33 REQUIREMENTS=latest
+install:
+  - pip install tox --use-mirrors
+script: tox
